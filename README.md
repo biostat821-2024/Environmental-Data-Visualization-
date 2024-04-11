@@ -10,9 +10,7 @@ Create a web application that visualizes environmental data, such as air quality
 1. *Data Collection Module*: Automates the retrieval of environmental data from public APIs or datasets.
 2. *Database Layer*: Stores and manages the collected data efficiently.
 3. *Data Processing and Analysis Module*: Cleans, processes, and analyzes the data to generate insights and visualizations.
-4. *Web Server*: Serves the application, handling requests and responses.
-5. *Frontend UI*: Interactive web interface that allows users to select parameters (e.g., location, date range) and view visualizations.
-6. *API Layer*: Optional RESTful API to provide access to raw data and analytical results for advanced users or third-party applications.
+4. *Frontend UI*: Interactive web interface that allows users to select parameters (e.g., location, date range) and view visualizations.
 
 ## Development Tasks:
 1. Data Collection and Management: Setting up scripts to fetch, clean, and store data regularly.
