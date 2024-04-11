@@ -1,8 +1,30 @@
-# MEDICAL IMAGE CLASSIFICATION 
-Storyline: 
+# Environmental Data Visualization Application
 
-# PROJECT OUTLINE:
-1. Identifying a medical image classification model - We aim to research different models that can correctly classify medical images such as external body parts, organs , tissues etc.
-2. Building and API in the form of a library that can be imported on your computer so that the it can run the model's functionalities.
-3. Identifying potential issues regarding image file formats.
-4. Expoloring the avenue of building an interface so that images can be uploaded for classification
+**Team members**: Anastasiia Saenko, Antara Bhide, Keon Nartey
+
+**Idea Description**:
+Create a web application that visualizes environmental data, such as air quality, water quality, and climate change indicators, from various sources. Users can view historical trends, compare data across different regions, and receive insights into environmental health. This project can make essential environmental data more accessible and understandable to the public, researchers, and policymakers.
+
+
+## Software Architecture:
+1. *Data Collection Module*: Automates the retrieval of environmental data from public APIs or datasets.
+2. *Database Layer*: Stores and manages the collected data efficiently.
+3. *Data Processing and Analysis Module*: Cleans, processes, and analyzes the data to generate insights and visualizations.
+4. *Web Server*: Serves the application, handling requests and responses.
+5. *Frontend UI*: Interactive web interface that allows users to select parameters (e.g., location, date range) and view visualizations.
+6. *API Layer*: Optional RESTful API to provide access to raw data and analytical results for advanced users or third-party applications.
+
+## Development Tasks:
+1. Data Collection and Management: Setting up scripts to fetch, clean, and store data regularly.
+2. Backend Development: Implementing logic for data processing, analysis, and serving requests.
+3. Frontend Development: Designing and implementing the user interface, focusing on usability and visual appeal.
+4. Data Visualization: Integrating charting libraries or building custom visualizations to effectively present the data.
+6.Documentation and Testing: Writing clear documentation for users and developers, alongside comprehensive tests to ensure reliability.
+
+Division of Labor:
+1. One member can focus on data collection and backend development, handling the retrieval, storage, and processing of environmental data.
+2. Another member could specialize in frontend development, working on the design and implementation of the web interface and user experience.
+3. The final member might concentrate on data visualization, ensuring that the data is presented in an insightful and accessible manner, in addition to overseeing testing and documentation.
+
+
+
