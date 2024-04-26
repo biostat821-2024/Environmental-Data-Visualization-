@@ -18,11 +18,11 @@ class Environment:
     def average_sulphur_dioxide(self) -> Any:
         """Calculating the mean So2 in India."""
         return self.df.so2.mean()
-    
+
     def average_nitrogen_oxide(self) -> Any:
         """Calculating the man No2 in India."""
         return self.df.no2.mean()
-    
+
     def state_max_so2(self) -> Any:
         """State with the maximum So2 production."""
         return self.df.groupby("state")["so2"].max()
