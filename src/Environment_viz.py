@@ -1,5 +1,7 @@
 """This class provides basic visualizations for Environmental data."""
 
+from typing import Dict
+
 import matplotlib.pyplot as plt
 import pandas as pd
 import seaborn as sns
@@ -9,7 +11,9 @@ from cleaning_data import Environment
 class Visualization:
     """Environment Visualization class."""
 
-    def __init__(self, environment: Environment, column_map: dict) -> None:
+    def __init__(
+        self, environment: Environment, column_map: Dict[str, str]
+    ) -> None:
         """Initializes the Visualization class.
 
             with a custom mapping of DataFrame columns.
