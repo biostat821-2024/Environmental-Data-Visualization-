@@ -1,15 +1,17 @@
-import unittest
-from io import StringIO
-import sys
+"""Test class for cleaning data functions."""
+
 import os
-import pandas as pd
-from contextlib import contextmanager
-from uuid import uuid4
 import pathlib
+import sys
 import tempfile
 import typing
+import unittest
+from contextlib import contextmanager
+from io import StringIO
 from unittest.mock import patch
+from uuid import uuid4
 
+import pandas as pd
 
 # Adjusting the path to import the module
 sys.path.append(
@@ -38,17 +40,39 @@ def fake_csv_files_from_content(
 
 
 class TestEnvironment(unittest.TestCase):
+    """Class for testing."""
+
     def setUp(self):
-        csv_data = """stn_code,sampling_date,state,location,agency,type,so2,no2,rspm,spm,location_monitoring_station,pm2_5,date
-        150,February - M021990,Andhra Pradesh,Hyderabad,NA,"Residential, Rural and other Areas",4.8,17.4,NA,NA,NA,NA,1990-02-01
-        151,February - M021990,Andhra Pradesh,Hyderabad,NA,Industrial Area,3.1,7,NA,NA,NA,NA,1990-02-01
-        152,February - M021990,Andhra Pradesh,Hyderabad,NA,"Residential, Rural and other Areas",6.2,28.5,NA,NA,NA,NA,1990-02-01
-        150,March - M031990,Andhra Pradesh,Hyderabad,NA,"Residential, Rural and other Areas",6.3,14.7,NA,NA,NA,NA,1990-03-01
-        151,March - M031990,Andhra Pradesh,Hyderabad,NA,Industrial Area,4.7,7.5,NA,NA,NA,NA,1990-03-01"""
+        """Fake Data Setup."""
+        csv_data = (
+            "stn_code,sampling_date,state,location,"
+            "agency,type,so2,no2,rspm,spm,"
+            "location_monitoring_station,pm2_5,date\n"
+            "150,February - M021990,Andhra Pradesh,"
+            'Hyderabad,NA,"Residential, Rural and '
+            'other Areas",4.8,17.4,NA,NA,NA,NA,'
+            "1990-02-01\n"
+            "151,February - M021990,Andhra Pradesh,"
+            "Hyderabad,NA,Industrial Area,3.1,7,NA,"
+            "NA,NA,NA,1990-02-01\n"
+            "152,February - M021990,Andhra Pradesh,"
+            'Hyderabad,NA,"Residential, Rural and '
+            'other Areas",6.2,28.5,NA,NA,NA,NA,'
+            "1990-02-01\n"
+            "150,March - M031990,Andhra Pradesh,"
+            'Hyderabad,NA,"Residential, Rural and '
+            'other Areas",6.3,14.7,NA,NA,NA,NA,'
+            "1990-03-01\n"
+            "151,March - M031990,Andhra Pradesh,"
+            "Hyderabad,NA,Industrial Area,4.7,7.5,NA,"
+            "NA,NA,NA,1990-03-01"
+        )
+
         with fake_csv_files_from_content(csv_data) as (file_path,):
             self.environment = Environment(file_path)
 
     def test_average_sulphur_dioxide(self):
+        """Test average so2."""
         result = self.environment.average_sulphur_dioxide()
         ls = [4.8, 3.1, 6.2, 6.3, 4.7]
         expected = sum(ls) / len(ls)  # Calculation based on the provided data
@@ -57,6 +81,7 @@ class TestEnvironment(unittest.TestCase):
         )
 
     def test_average_nitrogen_oxide(self):
+        """Test average no2."""
         result = self.environment.average_nitrogen_oxide()
         ls = [17.4, 7.0, 28.5, 14.7, 7.5]
         expected = sum(ls) / len(ls)  # Calculation based on the provided data
@@ -65,6 +90,7 @@ class TestEnvironment(unittest.TestCase):
         )
 
     def test_state_max_so2(self):
+        """Test state max."""
         result = self.environment.state_max_so2()
         expected = pd.Series(
             [6.3], index=["Andhra Pradesh"]
@@ -72,18 +98,37 @@ class TestEnvironment(unittest.TestCase):
         pd.testing.assert_series_equal(result, expected, check_names=False)
 
     def test_print_data(self):
+        """Test print statement."""
         # Capture output from the actual print_data method
         with patch("sys.stdout", new_callable=StringIO) as fake_out:
             self.environment.print_data()
             actual_output = fake_out.getvalue()
 
         # Prepare expected data
-        csv_data = """stn_code,sampling_date,state,location,agency,type,so2,no2,rspm,spm,location_monitoring_station,pm2_5,date
-        150,February - M021990,Andhra Pradesh,Hyderabad,NA,"Residential, Rural and other Areas",4.8,17.4,NA,NA,NA,NA,1990-02-01
-        151,February - M021990,Andhra Pradesh,Hyderabad,NA,Industrial Area,3.1,7,NA,NA,NA,NA,1990-02-01
-        152,February - M021990,Andhra Pradesh,Hyderabad,NA,"Residential, Rural and other Areas",6.2,28.5,NA,NA,NA,NA,1990-02-01
-        150,March - M031990,Andhra Pradesh,Hyderabad,NA,"Residential, Rural and other Areas",6.3,14.7,NA,NA,NA,NA,1990-03-01
-        151,March - M031990,Andhra Pradesh,Hyderabad,NA,Industrial Area,4.7,7.5,NA,NA,NA,NA,1990-03-01"""
+
+        csv_data = (
+            "stn_code,sampling_date,state,location,"
+            "agency,type,so2,no2,rspm,spm,"
+            "location_monitoring_station,pm2_5,date\n"
+            "150,February - M021990,Andhra Pradesh,"
+            'Hyderabad,NA,"Residential, Rural and '
+            'other Areas",4.8,17.4,NA,NA,NA,NA,'
+            "1990-02-01\n"
+            "151,February - M021990,Andhra Pradesh,"
+            "Hyderabad,NA,Industrial Area,3.1,7,NA,"
+            "NA,NA,NA,1990-02-01\n"
+            "152,February - M021990,Andhra Pradesh,"
+            'Hyderabad,NA,"Residential, Rural and '
+            'other Areas",6.2,28.5,NA,NA,NA,NA,'
+            "1990-02-01\n"
+            "150,March - M031990,Andhra Pradesh,"
+            'Hyderabad,NA,"Residential, Rural and '
+            'other Areas",6.3,14.7,NA,NA,NA,NA,'
+            "1990-03-01\n"
+            "151,March - M031990,Andhra Pradesh,"
+            "Hyderabad,NA,Industrial Area,4.7,7.5,NA,"
+            "NA,NA,NA,1990-03-01"
+        )
 
         expected_df = pd.read_csv(StringIO(csv_data))
 
