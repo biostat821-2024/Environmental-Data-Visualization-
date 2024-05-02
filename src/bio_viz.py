@@ -4,14 +4,14 @@ from cleaning_data import Environment
 
 
 class SO2PieChart:
-    """Pie chart to visualize SO2 production across states."""
+    """Class fora pie chart to visualize SO2 levels across states."""
 
     def __init__(self, data):
         """Initialize SO2PieChart object with data."""
         self.data = data
 
     def process_data(self):
-        """Process the data"""
+        """Process the data."""
         if not isinstance(self.data, pd.DataFrame):
             self.data = pd.DataFrame(self.data)
         self.data.dropna(subset=["so2"], inplace=True)
