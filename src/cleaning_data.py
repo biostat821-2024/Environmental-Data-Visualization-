@@ -29,7 +29,7 @@ class Environment:
 
     def print_data(self) -> None:
         """Prints the data."""
-        print(self.df)
+        print(self.df.columns)
 
 
 if __name__ == "__main__":
@@ -39,5 +39,5 @@ if __name__ == "__main__":
     )
     environment = Environment(path)
     # environment.print_data()
-    print(environment.average_sulphur_dioxide())
+    print(environment.average_nitrogen_oxide())
     print(environment.state_max_so2())
