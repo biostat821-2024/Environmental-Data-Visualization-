@@ -53,6 +53,8 @@ The pie chart visually represents the distribution of maximum Sulfur Dioxide (SO
 
 The function that was used to generate this pie chart was the `state_max_so2` which we had included in our codebase. The data frame that emeged a s result of this function was visualised as this pie chart. 
 
+## Tests 
+
 ## References
 
 https://www.iqair.com/india
