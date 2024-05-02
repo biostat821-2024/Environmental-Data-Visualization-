@@ -1,8 +1,7 @@
 """Module for visualizing SO2 levels across states."""
 
-import pandas as pd
 import matplotlib.pyplot as plt
-from cleaning_data import Environment
+import pandas as pd
 
 
 class SO2PieChart:
