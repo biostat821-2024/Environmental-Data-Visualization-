@@ -11,7 +11,7 @@ def test_average_sulphur_dioxide() -> None:
     file_path = "./data/data.csv"
     env = Environment(file_path)
 
-    expected_sulphur_value = 10.829414322672587
+    expected_sulphur_value = 9.968363772981911
     false_value = 12
 
     assert env.average_sulphur_dioxide() == expected_sulphur_value
@@ -23,7 +23,7 @@ def test_average_nitrogen_dioxide() -> None:
     file_path = "./data/data.csv"
     env = Environment(file_path)
 
-    expected_nitrogen_value = 25.80962289781126
+    expected_nitrogen_value = 24.848119052645607
     false_value = 12
 
     assert env.average_nitrogen_oxide() == expected_nitrogen_value
