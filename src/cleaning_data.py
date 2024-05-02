@@ -27,9 +27,9 @@ class Environment:
         """State with the maximum So2 production."""
         return self.df.groupby("state")["so2"].max()
 
-    def print_data(self) -> None:
-        """Prints the data."""
-        print(self.df.columns)
+    # def print_data(self) -> None:
+    #     """Prints the data."""
+    #     print(self.df)
 
 
 if __name__ == "__main__":

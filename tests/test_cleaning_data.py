@@ -1,6 +1,5 @@
 """Creating Tests for Data Parsing."""
 
-import numpy as np
 import pandas as pd
 from cleaning_data import (
     Environment,
