@@ -2,6 +2,8 @@
 
 **Team members**: Anastasiia Saenko, Antara Bhide, Keon Nartey
 
+![Be a part of the solution, not pollution](https://github.com/biostat821-2024/Environmental-Data-Visualization-/assets/125210401/61319e61-968c-4981-aaa8-6102daaee9e2)
+
 ## Idea Description:
 This project aims to visualise environmental, specifically pollution related data in [India](https://www.nytimes.com/2017/02/14/world/asia/indias-air-pollution-rivals-china-as-worlds-deadliest.html?_r=0).  
 
