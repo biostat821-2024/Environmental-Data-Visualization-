@@ -72,13 +72,30 @@ class TestEnvironment(unittest.TestCase):
         pd.testing.assert_series_equal(result, expected, check_names=False)
 
     def test_print_data(self):
+        # Capture output from the actual print_data method
         with patch("sys.stdout", new_callable=StringIO) as fake_out:
             self.environment.print_data()
-            output = fake_out.getvalue()
-            # Check if "Andhra Pradesh" is present in any part of the DataFrame output
-            self.assertTrue(
-                "Andhra Pradesh" in output
-            )  # Checking if SO2 value is in the output
+            actual_output = fake_out.getvalue()
+
+        # Prepare expected data
+        csv_data = """stn_code,sampling_date,state,location,agency,type,so2,no2,rspm,spm,location_monitoring_station,pm2_5,date
+        150,February - M021990,Andhra Pradesh,Hyderabad,NA,"Residential, Rural and other Areas",4.8,17.4,NA,NA,NA,NA,1990-02-01
+        151,February - M021990,Andhra Pradesh,Hyderabad,NA,Industrial Area,3.1,7,NA,NA,NA,NA,1990-02-01
+        152,February - M021990,Andhra Pradesh,Hyderabad,NA,"Residential, Rural and other Areas",6.2,28.5,NA,NA,NA,NA,1990-02-01
+        150,March - M031990,Andhra Pradesh,Hyderabad,NA,"Residential, Rural and other Areas",6.3,14.7,NA,NA,NA,NA,1990-03-01
+        151,March - M031990,Andhra Pradesh,Hyderabad,NA,Industrial Area,4.7,7.5,NA,NA,NA,NA,1990-03-01"""
+
+        expected_df = pd.read_csv(StringIO(csv_data))
+
+        # Capture output from printing expected data
+        with patch("sys.stdout", new_callable=StringIO) as fake_out:
+            print(expected_df)
+            expected_output = fake_out.getvalue()
+
+        # Compare the outputs
+        self.assertEqual(
+            actual_output, expected_output, "The outputs do not match"
+        )
 
 
 if __name__ == "__main__":
