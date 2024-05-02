@@ -56,7 +56,7 @@ class SO2PieChart:
 
 # Initialize Environment with file path
 environment = Environment(
-    r"C:\Users\admin\Desktop\Environmental-Data-Visualization-\data\data.csv"
+    r"data\data.csv"
 )
 
 # Get the data using state_max_so2 method
