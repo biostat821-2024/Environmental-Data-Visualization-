@@ -15,13 +15,13 @@ class Environment:
             self.file_path, encoding="latin1", low_memory=False
         )
 
-    def average_sulphur_dioxide(self) -> Any:
+    def average_sulphur_dioxide(self) -> float:
         """Calculating the mean So2 in India."""
-        return self.df.so2.mean()
+        return float(self.df.so2.mean())
 
-    def average_nitrogen_oxide(self) -> Any:
+    def average_nitrogen_oxide(self) -> float:
         """Calculating the man No2 in India."""
-        return self.df.no2.mean()
+        return float(self.df.no2.mean())
 
     def state_max_so2(self) -> Any:
         """State with the maximum So2 production."""
