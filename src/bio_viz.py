@@ -2,23 +2,30 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from cleaning_data import Environment
 
-
 class SO2PieChart:
+    """Class for creating a pie chart representing SO2 production across states."""
+
     def __init__(self, data):
+        """
+        Initializes the SO2PieChart object.
+
+        Parameters:
+        - data: DataFrame containing SO2 production data for different states.
+        """
         self.data = data
 
     def process_data(self):
-        # Convert data to DataFrame if necessary
+        """
+        Process the data by converting it to a DataFrame,
+        dropping NaN values, and sorting the data by SO2 levels.
+        """
         if not isinstance(self.data, pd.DataFrame):
             self.data = pd.DataFrame(self.data)
-
-        # Drop rows with NaN values
         self.data.dropna(subset=["so2"], inplace=True)
-
-        # Sort data by SO2 levels
         self.data.sort_values(by="so2", ascending=False, inplace=True)
 
     def plot_chart(self):
+        """Plot the pie chart representing the distribution of maximum SO2 production across states."""
         plt.figure(figsize=(12, 10))
         patches, texts = plt.pie(
             self.data["so2"],
@@ -51,7 +58,6 @@ class SO2PieChart:
 environment = Environment(
     r"C:\Users\admin\Desktop\Environmental-Data-Visualization-\data\data.csv"
 )
-
 
 # Get the data using state_max_so2 method
 state_max_so2_data = environment.state_max_so2()
