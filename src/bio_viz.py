@@ -7,18 +7,18 @@ import pandas as pd
 class SO2PieChart:
     """Class for a pie chart to visualize SO2 levels across states."""
 
-    def __init__(self, data):
+    def __init__(self, data: pd.Series):
         """Initialize SO2PieChart object with data."""
         self.data = data
 
-    def process_data(self):
+    def process_data(self) -> None:
         """Process the data."""
         if not isinstance(self.data, pd.DataFrame):
             self.data = pd.DataFrame(self.data)
         self.data.dropna(subset=["so2"], inplace=True)
         self.data.sort_values(by="so2", ascending=False, inplace=True)
 
-    def plot_chart(self):
+    def plot_chart(self) -> None:
         """Plot the pie chart."""
         plt.figure(figsize=(12, 10))
         patches, texts = plt.pie(
@@ -46,18 +46,3 @@ class SO2PieChart:
         plt.title("Distribution of Maximum SO2 Production Across States")
         plt.tight_layout()
         plt.show()
-
-
-# Initialize Environment with file path
-# environment = Environment(r"data\data.csv")
-
-# # Get the data using state_max_so2 method
-# state_max_so2_data = environment.state_max_so2()
-
-# # Create DataFrame from the output of state_max_so2
-# state_max_so2_df = pd.DataFrame(state_max_so2_data).reset_index()
-
-# # Plot chart using the DataFrame
-# so2_chart = SO2PieChart(state_max_so2_df)
-# so2_chart.process_data()
-# so2_chart.plot_chart()
