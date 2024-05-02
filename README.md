@@ -63,6 +63,8 @@ A full **demonstration** of the visualization functions usage is provided in the
 
 ## Tests 
 
+The testing class was developed for the data reading and basic functions and it is provided in the [test/test_cleaning.py](tests/test_cleaning.py); 
+
 ## References
 
 https://www.iqair.com/india
