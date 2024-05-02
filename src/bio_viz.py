@@ -1,10 +1,12 @@
+"""Module for visualizing SO2 levels across states."""
+
 import pandas as pd
 import matplotlib.pyplot as plt
 from cleaning_data import Environment
 
 
 class SO2PieChart:
-    """Class fora pie chart to visualize SO2 levels across states."""
+    """Class for a pie chart to visualize SO2 levels across states."""
 
     def __init__(self, data):
         """Initialize SO2PieChart object with data."""
@@ -49,7 +51,7 @@ class SO2PieChart:
 
 # Initialize Environment with file path
 environment = Environment(
-    r"C:\Users\admin\Desktop\Environmental-Data-Visualization-\data\data.csv"
+    r"data\data.csv"
 )
 
 # Get the data using state_max_so2 method
