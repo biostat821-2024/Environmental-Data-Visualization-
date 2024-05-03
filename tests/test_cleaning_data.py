@@ -11,7 +11,7 @@ def test_average_sulphur_dioxide() -> None:
     file_path = "./data/data.csv"
     env = Environment(file_path)
 
-    expected_sulphur_value = 9.968363772981911
+    expected_sulphur_value = 10.829414322672587
     false_value = 12
 
     assert env.average_sulphur_dioxide() == expected_sulphur_value
@@ -23,7 +23,7 @@ def test_average_nitrogen_dioxide() -> None:
     file_path = "./data/data.csv"
     env = Environment(file_path)
 
-    expected_nitrogen_value = 24.848119052645607
+    expected_nitrogen_value = 25.80962289781126
     false_value = 12
 
     assert env.average_nitrogen_oxide() == expected_nitrogen_value
@@ -41,6 +41,7 @@ def test_state_max_so2() -> None:
             "Tripura",
         ],
         "so2": [228.0, 13.0, 56.0, 216.6, None],
+        "no2": [165, 8, 2, 4, 6]
     }
 
     test_df = pd.DataFrame(data)

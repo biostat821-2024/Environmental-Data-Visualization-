@@ -1,6 +1,6 @@
-state,so2
-Andhra Pradesh,228.0
-Arunachal Pradesh,13.0
-Assam,56.0
-Bihar,216.6
-Tripura,
+state,so2,no2
+Andhra Pradesh,228.0,165
+Arunachal Pradesh,13.0,8
+Assam,56.0,2
+Bihar,216.6,4
+Tripura,,6
