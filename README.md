@@ -4,15 +4,25 @@
 
 ![Be a part of the solution, not pollution](https://github.com/biostat821-2024/Environmental-Data-Visualization-/assets/125210401/61319e61-968c-4981-aaa8-6102daaee9e2)
 
-## Idea Description:
-This project aims to visualise environmental, specifically pollution related data in [India](https://www.nytimes.com/2017/02/14/world/asia/indias-air-pollution-rivals-china-as-worlds-deadliest.html?_r=0).  
+## Introduction:
+This Githhub repository aims to visualise environmental, specifically pollution related data in [India](https://www.nytimes.com/2017/02/14/world/asia/indias-air-pollution-rivals-china-as-worlds-deadliest.html?_r=0).  
 
-In 2019, as part of a worldwide survey, it was discovered that 21 out of the 30 most polluted cities were in India. And this pushed India’s ranking as a country to 5th place. The US AQI number averaged out at 152 and the PM2.5 figure recorded was 58.08µg/m³. This concentration was 5 times higher than that recommended by the World Health Organisation (WHO). This is an overall improvement on the 2018 figure of 72.54µg/m³. This means serious health problems for most of the country.
+In 2019, as part of a worldwide survey, it was discovered that 21 out of the 30 most polluted cities were in India. And this pushed India’s ranking as a country to 5th place. The US AQI number averaged out at 152 and the PM2.5 figure recorded was 58.08µg/m³. This concentration was 5 times higher than that recommended by the World Health Organisation (WHO). This is an overall improvement on the 2018 figure of 72.54µg/m³. The levels of the pollutant PM 2.5 are often well above the World Health Organisation’s recommended level of exposure (often over 5 times higher) and this leads to serious respiratory problems for those exposed to it. 
 
-The levels of the pollutant PM 2.5 are often well above the World Health Organisation’s recommended level of exposure (often over 5 times higher) and this leads to serious respiratory problem for those exposed to it. This is from both outside and household air pollution. Records show that in 2019 over 1.6 million deaths were attributed to poor air quality. the State of Global Air 2020 noted that air pollution is now the largest risk factor for death amongst all other forms.
+Records show that in 2019 over 1.6 million deaths were attributed to poor air quality. the State of Global Air 2020 noted that air pollution is now the largest risk factor for death amongst all other forms.
 
-In this project, we focus primarily on the pollutants - Sulphur Dioxide and Nitrogen Oxide by analysing their state wise levels. 
+In this repository, we focus primarily on the pollutants - Sulphur Dioxide and Nitrogen Oxide by analysing their state wise levels. 
 
+## Approach
+We divided this project into 3 key phases:
+1. Data Cleaning accompanie with the creation of classes to calcuate the pollutant levels
+2. Data Vizualization : We vizualised the data as a Heatmap and a Piechart
+3. Testing all components
+
+## Installation:
+To replicate the resuts on your computer, please fork this guthub repository or clone it using https://github.com/biostat821-2024/Environmental-Data-Visualization-.git.
+
+Please ensure that you install all libraries outlined within the requirements.txt file. You will also need to ensure that you have Python installed on your computer. 
 
 
 ## Data 
