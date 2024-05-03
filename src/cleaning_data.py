@@ -16,7 +16,7 @@ class Environment:
         )
         print(self.df.columns)
         print(self.df.dtypes)
-        print(self.df[['so2', 'no2']].head())
+        print(self.df[["so2", "no2"]].head())
 
     def average_sulphur_dioxide(self) -> float:
         """Calculating the mean So2 in India."""
