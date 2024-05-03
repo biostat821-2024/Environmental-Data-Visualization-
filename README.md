@@ -52,7 +52,7 @@ Some basic python methods were created to get the
 
 We have included two visualisations our data:
 
-Heatmap : 
+# 1)  Heatmap : 
 
 We created a heatmap  displaying the average levels of a particular pollutant across different states and years. It visually represents how pollution varies geographically and over time, helping us understand environmental trends and potential health implications more
 intuitively. The function allows to choose different metrics to plot. 
@@ -60,7 +60,7 @@ intuitively. The function allows to choose different metrics to plot.
 ![image](https://github.com/biostat821-2024/Environmental-Data-Visualization-/assets/54864655/5139155d-dd0f-4867-b5b7-537083f47ffe)
 
 
-  2)  Pie Chart :
+  # 2)  Pie Chart :
 
 The pie chart visually represents the distribution of maximum Sulfur Dioxide (SO2) production across different states. Each slice of the pie corresponds to a state, with the size of the slice indicating the proportion of SO2 production from that state relative to the total production. This provides insights into which states contribute the most to overall SO2 emissions.
 
