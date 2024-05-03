@@ -15,7 +15,7 @@ In this repository, we focus primarily on the pollutants - Sulphur Dioxide and N
 
 ## Approach
 We divided this project into 3 key phases:
-1. Data Cleaning accompanie with the creation of classes to calcuate the pollutant levels
+1. Data Cleaning accompanied with the creation of classes to calcuate the pollutant levels
 2. Data Vizualization : We vizualised the data as a Heatmap and a Piechart
 3. Testing all components
 
