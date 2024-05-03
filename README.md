@@ -20,7 +20,7 @@ We divided this project into 3 key phases:
 3. Testing all components
 
 ## Installation:
-To replicate the resuts on your computer, please fork this guthub repository or clone it using https://github.com/biostat821-2024/Environmental-Data-Visualization-.git.
+To replicate the results on your computer, please fork this Github repository or clone it using https://github.com/biostat821-2024/Environmental-Data-Visualization-.git.
 
 Please ensure that you install all libraries outlined within the requirements.txt file. You will also need to ensure that you have Python installed on your computer. 
 
