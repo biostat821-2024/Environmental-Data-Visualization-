@@ -76,7 +76,7 @@ A full **demonstration** of the visualization functions usage is provided in the
 The testing class was developed for the data reading and basic functions and it is provided in the [test/test_cleaning.py](tests/test_cleaning.py); \
 
 ## Future Work
-In order to build on this project, we would like to expand the the number of the types of pollutants such as Carbon Monoxide(CO) and Particulate Matter(PM10) who's levels we are analysing in India. We would then like to integrate health related data, preferably from official sources hosted by the Government Of India  to analyze the health disorders caused by each of these pollutants and the rate of growth of these diseases in India. 
+In order to build on this project, we would like to expand the the types of pollutants to include more  such as Carbon Monoxide(CO) and Particulate Matter(PM10) who's levels we are analysing in India. We would then like to integrate health related data, preferably from official sources hosted by the Government Of India  to analyze the health disorders caused by each of these pollutants and the rate of growth of these diseases in India. 
 
 ## References
 
