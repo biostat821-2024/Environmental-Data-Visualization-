@@ -41,7 +41,7 @@ def test_state_max_so2() -> None:
             "Tripura",
         ],
         "so2": [228.0, 13.0, 56.0, 216.6, None],
-        "no2": [165, 8, 2, 4, 6],
+        "no2": [165, 8, 2, 4, 6]
     }
 
     test_df = pd.DataFrame(data)

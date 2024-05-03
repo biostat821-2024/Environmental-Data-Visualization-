@@ -30,9 +30,9 @@ class Environment:
         """State with the maximum So2 production."""
         return self.df.groupby("state")["so2"].max()
 
-    # def print_data(self) -> None:
-    #     """Prints the data."""
-    #     print(self.df.columns)
+    def print_data(self) -> Any:
+        """Prints the data."""
+        print(self.df.columns)
 
 
 if __name__ == "__main__":
@@ -41,6 +41,6 @@ if __name__ == "__main__":
         "Environmental-Data-Visualization-/data/data.csv"
     )
     environment = Environment(path)
-    # print(environment.print_data())
+    print(environment.print_data())
     print(environment.average_nitrogen_oxide())
     # print(environment.state_max_so2())
